@@ -62,6 +62,52 @@ namespace NBitcoin.Advanced
             return _jsonRpcClient.InvokeMethod<Response<NodeInfo[]>>(request);
         }
 
+        public Response<BlockInfo> GetBlock(string blockHash, string id = null)
+        {
+            var request = Request.FromString("getblock", blockHash, id);
+            return _jsonRpcClient.InvokeMethod<Response<BlockInfo>>(request);
+        }
+
+        public Response<long> GetBlockCount(string id = null)
+        {
+            var request = Request.FromString("getblockcount", null, id);
+            return _jsonRpcClient.InvokeMethod<Response<long>>(request);
+        }
+
+        //public Response<string> GetBlockHash(string index)
+        //{
+            
+        //}
+
+        //public Response<BlockData> GetBlockTemplate()
+        //{
+            
+        //}
+
+        public Response<int> GetConnectionCount(string id = null)
+        {
+            var request = Request.FromString("getconnectioncount", id);
+            return _jsonRpcClient.InvokeMethod<Response<int>>(request);
+        }
+
+        public Response<decimal> GetDifficulty(string id = null)
+        {
+            var request = Request.FromString("getdifficulty", id);
+            return _jsonRpcClient.InvokeMethod<Response<decimal>>(request);
+        }
+
+        public Response<bool> GetGenerate(string id = null)
+        {
+            var request = Request.FromString("getgenerate", id);
+            return _jsonRpcClient.InvokeMethod<Response<bool>>(request);
+        }
+
+        public Response<decimal> GetHashesPerSec(string id = null)
+        {
+            var request = Request.FromString("gethashespersec", id);
+            return _jsonRpcClient.InvokeMethod<Response<decimal>>(request);
+        }
+
         private readonly IJsonRpcClient _jsonRpcClient;
 
         public Advanced(IJsonRpcClient jsonRpcClient)

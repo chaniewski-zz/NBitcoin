@@ -42,6 +42,18 @@ namespace NBitcoin
             return _jsonRpcClient.InvokeMethod<Response<string[]>>(request);
         }
 
+        public Response<decimal?> GetTotalBalance(string id = null)
+        {
+            var request = Request.FromObject(new GetBalanceRequest(), id);
+            return _jsonRpcClient.InvokeMethod<Response<decimal?>>(request);
+        }
+
+        public Response<decimal?> GetAccountBalance(string account, int? minConfirmations = null, string id = null)
+        {
+            var request = Request.FromObject(new GetBalanceRequest(account, minConfirmations), id);
+            return _jsonRpcClient.InvokeMethod<Response<decimal?>>(request);
+        }
+
         public Response<GetInfo> GetInfo(string id = null)
         {
             var request = Request.FromObject(new GetInfoRequest(), id);

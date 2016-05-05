@@ -15,5 +15,7 @@ namespace NBitcoin
         Response<string> GetAccount(string bitcoinAddress, string id = null);
         Response<string> GetAccountAddress(string account, string id = null);
         Response<string[]> GetAddressesByAccount(string account, string id = null);
+        Response<decimal?> GetTotalBalance(string id = null);
+        Response<decimal?> GetAccountBalance(string account, int? minConfirmations = null, string id = null);
     }
 }

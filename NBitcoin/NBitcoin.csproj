@@ -47,6 +47,7 @@
     <Compile Include="AddNodeOperation.cs" />
     <Compile Include="Advanced\Advanced.cs" />
     <Compile Include="Advanced\Responses\AddressInfo.cs" />
+    <Compile Include="Advanced\Responses\BlockInfo.cs" />
     <Compile Include="Advanced\Responses\Destination.cs" />
     <Compile Include="Advanced\IAdvanced.cs" />
     <Compile Include="Advanced\Requests\GetAddedNodeInfoRequest.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Requests\BackupWalletRequest.cs" />
     <Compile Include="Advanced\Requests\CreateMultiSigRequest.cs" />
     <Compile Include="Advanced\Requests\CreateRawTransactionRequest.cs" />
+    <Compile Include="Requests\GetBalanceRequest.cs" />
     <Compile Include="Requests\GetInfoRequest.cs" />
     <Compile Include="Requests\GetNewAddressRequest.cs" />
     <Compile Include="Requests\ValidateAddressRequest.cs" />

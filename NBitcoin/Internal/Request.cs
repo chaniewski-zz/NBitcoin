@@ -29,7 +29,7 @@ namespace NBitcoin.Internal
 
         public static Request FromString(string method, string payload, string id = null)
         {
-            return new Request(method.ToLower(), id ?? Guid.NewGuid().ToString(), new[] {payload});
+            return new Request(method.ToLower(), id ?? Guid.NewGuid().ToString(), payload != null ? new[] {payload} : new object[]{});
         }
 
         private static IEnumerable<object> ToParams<T>(T payload)

@@ -12,5 +12,7 @@ namespace NBitcoin.Advanced
         Response<BitcoinTransaction> DecodeRawTransaction(string hexString, string id = null);
         Response<string> DumpPrivKey(string bitcoinAddress, string id = null);
         Response<NodeInfo[]> GetAddedNodeInfo(bool showConnectedInformation, string nodeAddress, string id = null);
+        Response<BlockInfo> GetBlock(string blockHash, string id = null);
+        Response<long> GetBlockCount(string id = null);
     }
 }
